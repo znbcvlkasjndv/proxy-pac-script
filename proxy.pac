@@ -67,7 +67,8 @@ function FindProxyForURL(url, host) {
     // Функция проверки принадлежности хоста к списку доменов и поддоменов
     function isInProxyList(host) {
         for (var i = 0; i < proxyDomains.length; i++) {
-            if (dnsDomainIs(host, "." + proxyDomains[i])) {
+            // Проверяем, является ли хост поддоменом указанного домена
+            if (dnsDomainIs(host, proxyDomains[i]) || dnsDomainIs(host, "." + proxyDomains[i])) {
                 return true;
             }
         }
