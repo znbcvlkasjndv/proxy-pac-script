@@ -62,10 +62,6 @@ function FindProxyForURL(url, host) {
         "youtube.com",
         "youtu.be",
         "ggpht.com",
-        "i.ytimg.com",
-        "www.youtube.com",
-        "yt4.ggpht.com",
-        "yt3.ggpht.com"
         "ytimg.com"
     ];
 
@@ -74,10 +70,6 @@ function FindProxyForURL(url, host) {
         for (var i = 0; i < proxyDomains.length; i++) {
             // Проверяем, является ли хост поддоменом указанного домена
             if (dnsDomainIs(host, proxyDomains[i]) || dnsDomainIs(host, "." + proxyDomains[i])) {
-                return true;
-            }
-            // Дополнительная проверка для googlevideo.com с учетом префиксов
-            if (dnsDomainIs(host, "googlevideo.com") || dnsDomainIs(host, ".googlevideo.com")) {
                 return true;
             }
         }
