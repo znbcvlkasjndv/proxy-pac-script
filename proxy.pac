@@ -78,7 +78,7 @@ function FindProxyForURL(url, host) {
 
     // Если домен или поддомен есть в списке, используем SOCKS5-прокси
     if (isInProxyList(host)) {
-        return "SOCKS5 45.95.233.23:2285";
+        return "PROXY 45.95.233.23:2285";
     }
 
     // Для всех остальных доменов прямое соединение
