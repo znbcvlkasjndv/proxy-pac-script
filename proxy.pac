@@ -61,7 +61,12 @@ function FindProxyForURL(url, host) {
         "googlevideo.com",
         "youtube.com",
         "youtu.be",
-        "ggpht.com"
+        "ggpht.com",
+        "i.ytimg.com",
+        "www.youtube.com",
+        "yt4.ggpht.com",
+        "yt3.ggpht.com"
+        "ytimg.com"
     ];
 
     // Функция проверки принадлежности хоста к списку доменов и поддоменов
