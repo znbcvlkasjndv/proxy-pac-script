@@ -71,6 +71,10 @@ function FindProxyForURL(url, host) {
             if (dnsDomainIs(host, proxyDomains[i]) || dnsDomainIs(host, "." + proxyDomains[i])) {
                 return true;
             }
+            // Дополнительная проверка для googlevideo.com с учетом префиксов
+            if (dnsDomainIs(host, "googlevideo.com") || dnsDomainIs(host, ".googlevideo.com")) {
+                return true;
+            }
         }
         return false;
     }
